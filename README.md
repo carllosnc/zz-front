@@ -4,10 +4,10 @@
 
 What's inside
 
->Next
->ShadCN
->Better-auth
->Tailwind
+- Next
+- ShadCN
+- Better-auth
+- Tailwind
 
 ---
 
