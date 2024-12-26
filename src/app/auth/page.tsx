@@ -54,15 +54,20 @@ export default function AuthPage() {
                 </div>
               </CardHeader>
               <CardContent>
-                <Tabs defaultValue="account">
+                <Tabs defaultValue="sign-in">
                   <TabsList className="w-full">
-                  <TabsTrigger value="password" className="w-full">Sign In</TabsTrigger>
-                  <TabsTrigger value="account" className="w-full">Sign Up</TabsTrigger>
+                    <TabsTrigger value="sign-in" className="w-full">
+                      Sign In
+                    </TabsTrigger>
+                    <TabsTrigger value="sign-up" className="w-full">
+                      Sign Up
+                    </TabsTrigger>
                   </TabsList>
-                  <TabsContent className="pt-[10px]" value="password">
+
+                  <TabsContent className="pt-[10px]" value="sign-in">
                     <SignInForm />
                   </TabsContent>
-                  <TabsContent className="pt-[10px]" value="account">
+                  <TabsContent className="pt-[10px]" value="sign-up">
                     <SignUpForm />
                   </TabsContent>
                 </Tabs>
