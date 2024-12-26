@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
 import { PageLoading } from "@/components/page-loading";
@@ -9,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import { FaAngleDown } from "react-icons/fa";
 import { signOut } from "@/lib/auth"
 import { useRouter } from 'next/navigation'
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
 
 export default function Dashboard() {
   const { data, isPending } = useGetSession()
