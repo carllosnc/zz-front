@@ -1,5 +1,6 @@
 "use client"
 
+import { useRouter } from 'next/navigation'
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -20,6 +21,7 @@ export function SignUpForm() {
   const [isLoading, setIsLoading] = useState(false)
   const [authError, setAuthError] = useState<boolean | string>(false);
   const [serverError, setServerError] = useState<boolean | string>(false);
+  const router = useRouter()
 
   const form = useForm<SignUpValues>({
     resolver: zodResolver(signUpSchema),
@@ -46,11 +48,14 @@ export function SignUpForm() {
         setIsLoading(false);
         setAuthError(false);
         setServerError(false);
+
+        console.log("calling here!")
+        router.push("/dashboard");
       },
       onError: (ctx) => {
         //show message
         setIsLoading(false);
-        setAuthError(ctx.error.message);
+        setAuthError(ctx.error.message || ctx.error.statusText);
         setServerError(false);
       },
       }).then(() => {
@@ -60,7 +65,7 @@ export function SignUpForm() {
         setIsLoading(false);
         setAuthError(false);
         setServerError(err.message);
-      });
+      })
   }
 
   return (
