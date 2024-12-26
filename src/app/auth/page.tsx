@@ -48,7 +48,7 @@ export default function AuthPage() {
                   <Logo className="relative top-[3px] w-[55px] h-auto fill-zinc-950 dark:fill-white" />
 
                   <div>
-                    <CardTitle className="text-[20px]">ZZ Front</CardTitle>
+                    <CardTitle className="text-[20px]">Welcome!</CardTitle>
                     <CardDescription>Do login or create an account to continue.</CardDescription>
                   </div>
                 </div>
